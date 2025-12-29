@@ -1,0 +1,51 @@
+{
+  "name": "levelup-habits",
+  "version": "1.0.0",
+  "description": "A gamified habit tracker that transforms daily productivity into an RPG-style experience",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --live",
+    "build": "echo 'No build process needed for vanilla HTML/CSS/JS'",
+    "test": "echo 'No tests specified yet'",
+    "lint": "echo 'No linting configured yet'",
+    "deploy": "echo 'Deploy to GitHub Pages or your preferred hosting'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/levelup-habits.git"
+  },
+  "keywords": [
+    "habit-tracker",
+    "gamification",
+    "rpg",
+    "productivity",
+    "javascript",
+    "html5",
+    "css3",
+    "vanilla-js",
+    "progressive-web-app",
+    "mobile-responsive",
+    "localstorage",
+    "habits",
+    "streaks",
+    "xp-system",
+    "level-up"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/levelup-habits/issues"
+  },
+  "homepage": "https://github.com/yourusername/levelup-habits#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
