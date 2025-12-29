@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelUp Habits - RPG Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header with Level Progress -->
+        <header class="header">
+            <div class="player-info">
+                <h1 class="app-title">⚔️ LevelUp Habits</h1>
+                <div class="level-display">
+                    <span class="level-text">Level <span id="current-level">1</span></span>
+                    <div class="xp-bar-container">
+                        <div class="xp-bar" id="xp-bar"></div>
+                        <span class="xp-text"><span id="current-xp">0</span>/<span id="xp-needed">100</span> XP</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="main-content">
+            <!-- Stats Overview -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="total-streak">0</span>
+                        <span class="stat-label">Total Streak</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="completed-today">0</span>
+                        <span class="stat-label">Today</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="total-habits">0</span>
+                        <span class="stat-label">Active Habits</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Habit Form -->
+            <section class="add-habit-section">
+                <button class="add-habit-btn" id="add-habit-btn">
+                    <span class="btn-icon">➕</span>
+                    Add New Habit
+                </button>
+                
+                <div class="habit-form-modal" id="habit-form-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="modal-title">Create New Habit</h3>
+                            <button class="close-btn" id="close-modal">✕</button>
+                        </div>
+                        <form id="habit-form">
+                            <div class="form-group">
+                                <label for="habit-name">Habit Name</label>
+                                <input type="text" id="habit-name" placeholder="e.g., Drink 8 glasses of water" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="habit-category">Category</label>
+                                <select id="habit-category">
+                                    <option value="health">🏃 Health & Fitness</option>
+                                    <option value="productivity">💼 Productivity</option>
+                                    <option value="learning">📚 Learning</option>
+                                    <option value="mindfulness">🧘 Mindfulness</option>
+                                    <option value="social">👥 Social</option>
+                                    <option value="creative">🎨 Creative</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="habit-difficulty">Difficulty (XP Reward)</label>
+                                <select id="habit-difficulty">
+                                    <option value="easy">Easy - 10 XP</option>
+                                    <option value="medium">Medium - 20 XP</option>
+                                    <option value="hard">Hard - 30 XP</option>
+                                </select>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
+                                <button type="submit" class="btn-primary" id="submit-btn">Create Habit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Habits List -->
+            <section class="habits-section">
+                <h2 class="section-title">Today's Quests</h2>
+                <div class="habits-container" id="habits-container">
+                    <!-- Habits will be dynamically inserted here -->
+                </div>
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-icon">🎯</div>
+                    <h3>No habits yet!</h3>
+                    <p>Create your first habit to start your journey</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Level Up Animation -->
+        <div class="level-up-animation" id="level-up-animation">
+            <div class="level-up-content">
+                <div class="level-up-icon">🎉</div>
+                <h2>LEVEL UP!</h2>
+                <p>You've reached Level <span id="new-level"></span>!</p>
+            </div>
+        </div>
+
+        <!-- XP Gain Animation -->
+        <div class="xp-gain-animation" id="xp-gain-animation">
+            <span class="xp-gain-text">+<span id="xp-gained"></span> XP</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
